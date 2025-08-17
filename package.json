@@ -1,12 +1,12 @@
 {
-  "name": "splayer",
+  "name": "IU163",
   "version": "2.7.34",
   "description": "一个部署简单且界面美观的音乐播放器",
   "main": "./out/main/index.js",
   "author": "MoeFurina",
-  "home": "https://www.focalors.ltd",
-  "github": "https://github.com/MoeFurina/SPlayer",
-  "repository": "github:MoeFurina/SPlayer",
+  "home": "https://163.iuai.ltd",
+  "github": "https://github.com/sej95/I163",
+  "repository": "github:sej95/I163",
   "license": "AGPL-3.0",
   "license-file": "LICENSE",
   "engines": {
