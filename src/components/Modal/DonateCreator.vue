@@ -6,7 +6,7 @@
         <!--img v-for="(img, idx) in donateImgs" :key="idx" :src="img" class="donate-img" alt="捐赠二维码" style="width:180px;height:180px;" /-->
       </div>
     <a href="https://iuai.ltd/" target="_blank" rel="noopener" style="margin-bottom: 8px; color: #409eff; text-decoration: underline;">
-        跳转到捐赠页面
+        开始捐赠
     </a>
       <div class="donate-tip">感谢您的支持！</div>
     </div>
