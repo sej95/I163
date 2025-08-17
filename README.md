@@ -1,13 +1,7 @@
-# SPlayer
 
-> [!IMPORTANT]
->
-> [IamFurina](https://github.com/iamfurina)作者已经被Github封号了, 仓库也404了, 这个账号主要是为了继续维护这个仓库
-> 我已经向官方发出申诉, 希望尽快回归
 
 #### 一个简约且强大的音乐播放器
 
-![main](/screenshots/SPlayer.jpg)
 
 ## 说明
 
