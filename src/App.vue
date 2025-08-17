@@ -161,7 +161,7 @@ if ("serviceWorker" in navigator) {
           ),
         onAfterLeave: () => {
           $message.info("已取消本次更新，更新将在下次启动软件后生效", {
-            duration: 6000,
+            duration: 6,
           });
         },
       });
