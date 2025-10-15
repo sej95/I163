@@ -38,11 +38,11 @@ export const getSongLyricLegacy = async (id) => {
 export const getSongUrl = (id, level = "standard") => {
   return axios({
     method: "GET",
-/**    url: "https://api.vkeys.cn/v2/music/netease",
-/    url: "https://mc.alger.fun/music_proxy/music",
+    url: "https://api.vkeys.cn/v2/music/netease",
+/**    url: "https://mc.alger.fun/music_proxy/music",
     url: "/music_proxy/music",
- */   url: "/song/url/v1",
-    params: {
+    url: "/song/url/v1",
+ */   params: {
       id,
       level,
       timestamp: new Date().getTime(),
