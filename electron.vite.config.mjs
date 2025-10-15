@@ -134,6 +134,12 @@ export default defineConfig(async ({ mode }) => {
         port: devPort,
         // 代理
         proxy: {
+          "/music_proxy/music": {
+            target: "https://mc.alger.fun",
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/music_proxy\/music/, "/music_proxy/music"),
+            secure: false, // 如果目标是 HTTPS，可能需要设置为 false
+          },
           "/api": {
             target: `http://${getEnv("MAIN_VITE_SERVER_HOST")}:${serverPort}`,
             changeOrigin: true,
