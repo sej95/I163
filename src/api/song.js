@@ -36,11 +36,9 @@ export const getSongLyricLegacy = async (id) => {
  * @param {string} [level=standard] - 播放音质等级 / standard: 标准 /  higher: 较高 / exhigh: 极高 / lossless: 无损 / hires: Hi-Res / jyeffect: 高清环绕声 / sky: 沉浸环绕声 / jymaster: 超清母带
  */
 export const getSongUrl = (id, level = "standard") => {
-    return axios.get("/music_proxy/music", {
-    baseURL: "",   // ⚠️ 关键：取消全局 baseURL
-/**  return axios({
+  return axios({
     method: "GET",
-    url: "https://mc.alger.fun/music_proxy/music",
+/**    url: "https://mc.alger.fun/music_proxy/music",
     url: "/song/url/v1",
 */    url: "/music_proxy/music",
     params: {
