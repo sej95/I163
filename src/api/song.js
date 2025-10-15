@@ -40,7 +40,7 @@ export const getSongUrl = (id, level = "standard") => {
     method: "GET",
 /**    url: "https://mc.alger.fun/music_proxy/music",
     url: "/song/url/v1",
-*/    url: "/mc_alger_fun_proxy/music",
+*/    url: "/music_proxy/music",
     params: {
       id,
       level,
