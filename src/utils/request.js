@@ -17,6 +17,8 @@ axios.defaults.withCredentials = true;
 // 请求拦截
 axios.interceptors.request.use(
   (request) => {
+    console.log("Request baseURL:", axios.defaults.baseURL);
+    console.log("Request URL:", request.url);
     const settings = siteSettings();
     // 动态设置baseURL，避免顶层初始化错误
     if (settings.useCustomNCMServer) {
