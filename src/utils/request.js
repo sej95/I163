@@ -5,7 +5,7 @@ import axios from "axios";
 
 // 全局地址
 if (checkPlatform.electron() || import.meta.env["RENDERER_VITE_SITE_ROOT"] === "true") {
-  axios.defaults.baseURL = import.meta.env.DEV ? '/' : "/api";
+  axios.defaults.baseURL = "/api";
 } else {
   axios.defaults.baseURL = import.meta.env["RENDERER_VITE_SERVER_URL"];
 }
@@ -17,17 +17,15 @@ axios.defaults.withCredentials = true;
 // 请求拦截
 axios.interceptors.request.use(
   (request) => {
-    console.log("Request baseURL:", axios.defaults.baseURL);
-    console.log("Request URL:", request.url);
     const settings = siteSettings();
     // 动态设置baseURL，避免顶层初始化错误
     if (settings.useCustomNCMServer) {
-      axios.defaults.baseURL = import.meta.env.DEV ? '/' : settings.ncmServer;
+      axios.defaults.baseURL = settings.ncmServer;
     } else if (!settings.useCustomNCMServer) {
       if (checkPlatform.electron() || import.meta.env["RENDERER_VITE_SITE_ROOT"] === "true") {
-        axios.defaults.baseURL = import.meta.env.DEV ? '/' : "/api";
+        axios.defaults.baseURL = "/api";
       } else {
-        axios.defaults.baseURL = import.meta.env.DEV ? '/' : import.meta.env["RENDERER_VITE_SERVER_URL"];
+        axios.defaults.baseURL = import.meta.env["RENDERER_VITE_SERVER_URL"];
       }
     }
     if (!request.params) request.params = {};
