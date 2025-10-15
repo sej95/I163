@@ -134,17 +134,19 @@ export default defineConfig(async ({ mode }) => {
          port: devPort,
          // 代理
          proxy: {
-    // 🎵 代理到 mc.alger.fun
-    "/music_proxy": {
-      target: "http://mc.alger.fun", // 仍然是 HTTP
+    "/api/music_proxy": {
+      target: "http://mc.alger.fun",
       changeOrigin: true,
-      secure: false,
-      rewrite: (path) => path.replace(/^\/music_proxy/, "/music_proxy"),
+      rewrite: (path) => path.replace(/^\/api\/music_proxy/, "/music_proxy"),
     },
-           "/api": {
-             target: `http://${getEnv("MAIN_VITE_SERVER_HOST")}:${serverPort}`, // 修正：移除了多余的反引号和引号
-             changeOrigin: true,
-             rewrite: (path) => path.replace(/^\/api/, ""),
+    "/api": {
+      target: `http://${getEnv("MAIN_VITE_SERVER_HOST")}:${serverPort}`,
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/api/, ""),
+//           "/api": {
+//             target: `http://${getEnv("MAIN_VITE_SERVER_HOST")}:${serverPort}`, // 修正：移除了多余的反引号和引号
+//             changeOrigin: true,
+//             rewrite: (path) => path.replace(/^\/api/, ""),
            },
          },
        },
