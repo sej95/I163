@@ -38,9 +38,8 @@ export const getSongLyricLegacy = async (id) => {
 export const getSongUrl = (id, level = "standard") => {
   return axios({
     method: "GET",
-    url: "https://www.codeman.ink/api/song/url/v1",
-/**    url: "https://mc.alger.fun/music_proxy/music",
-    url: "/song/url/v1",
+    url: "https://mc.alger.fun/music_proxy/music",
+/**    url: "/song/url/v1",
     url: "/music_proxy/music",
  */   params: {
       id,
